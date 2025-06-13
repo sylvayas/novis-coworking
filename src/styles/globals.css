@@ -1,0 +1,290 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "LemonMilk";
+  src: url("/fonts/lemon_milk/LEMONMILK-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LemonMilk";
+  src: url("/fonts/lemon_milk/LEMONMILK-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "LemonMilk";
+  src: url("/fonts/lemon_milk/LEMONMILK-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LemonMilk";
+  src: url("/fonts/lemon_milk/LEMONMILK-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ArdelaEdge";
+  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ArdelaEdge";
+  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Italic Variable.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ArdelaEdge";
+  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ArdelaEdge";
+  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Bold Italic.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "saudagar";
+  src: url("/fonts/saudagar.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 180 100% 25%; /* NOVIS Green */
+    --primary-foreground: 210 40% 98%; /* Light text for green background */
+    --secondary: 25 95% 53%; /* NOVIS Orange */
+    --secondary-foreground: 210 40% 98%; /* Light text for orange background */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 25 95% 53%; /* NOVIS Orange */
+    --accent-foreground: 210 40% 98%; /* Light text for orange background */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 180 100% 25%; /* NOVIS Green */
+    --radius: 0.75rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* NOVIS Brand Colors - Couleurs du Logo */
+    --novis-primary: 180 100% 25%; /* Green */
+    --novis-secondary: 25 95% 53%; /* Orange */
+    --novis-accent: 180 100% 25%; /* Green (can be orange or other) */
+    --novis-neutral: 210 40% 96%;
+    --novis-dark: 222.2 84% 4.9%;
+    --novis-green: 180 100% 25%;
+    --novis-orange: 25 95% 53%;
+    --novis-teal: 180 100% 25%;
+    --novis-blue: 217 91% 60%;
+    --novis-pink: 330 81% 60%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 180 100% 25%; /* NOVIS Green */
+    --primary-foreground: 210 40% 98%; /* Light text for green background */
+    --secondary: 25 95% 53%; /* NOVIS Orange */
+    --secondary-foreground: 210 40% 98%; /* Light text for orange background */
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 25 95% 53%; /* NOVIS Orange */
+    --accent-foreground: 210 40% 98%; /* Light text for orange background */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 180 100% 25%; /* NOVIS Green */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    /* NOVIS Brand Colors - Dark Mode */
+    --novis-primary: 180 100% 25%;
+    --novis-secondary: 25 95% 53%;
+    --novis-accent: 180 100% 25%;
+    --novis-neutral: 217.2 32.6% 17.5%;
+    --novis-dark: 222.2 84% 4.9%;
+    --novis-green: 180 100% 25%;
+    --novis-orange: 25 95% 53%;
+    --novis-teal: 180 100% 25%;
+    --novis-blue: 217 91% 60%;
+    --novis-pink: 330 81% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-novis-primary {
+    color: hsl(var(--novis-primary));
+  }
+  
+  .text-novis-secondary {
+    color: hsl(var(--novis-secondary));
+  }
+  
+  .text-novis-accent {
+    color: hsl(var(--novis-accent));
+  }
+  
+  .text-novis-green {
+    color: hsl(var(--novis-green));
+  }
+  
+  .text-novis-orange {
+    color: hsl(var(--novis-orange));
+  }
+  
+  .text-novis-teal {
+    color: hsl(var(--novis-teal));
+  }
+  
+  .text-novis-blue {
+    color: hsl(var(--novis-blue));
+  }
+  
+  .text-novis-pink {
+    color: hsl(var(--novis-pink));
+  }
+  
+  .bg-novis-primary {
+    background-color: hsl(var(--novis-primary));
+  }
+  
+  .bg-novis-secondary {
+    background-color: hsl(var(--novis-secondary));
+  }
+  
+  .bg-novis-accent {
+    background-color: hsl(var(--novis-accent));
+  }
+  
+  .bg-novis-neutral {
+    background-color: hsl(var(--novis-neutral));
+  }
+  
+  .bg-novis-dark {
+    background-color: hsl(var(--novis-dark));
+  }
+  
+  .bg-novis-green {
+    background-color: hsl(var(--novis-green));
+  }
+  
+  .bg-novis-orange {
+    background-color: hsl(var(--novis-orange));
+  }
+  
+  .bg-novis-teal {
+    background-color: hsl(var(--novis-teal));
+  }
+  
+  .bg-novis-blue {
+    background-color: hsl(var(--novis-blue));
+  }
+  
+  .bg-novis-pink {
+    background-color: hsl(var(--novis-pink));
+  }
+  
+  .border-novis-primary {
+    border-color: hsl(var(--novis-primary));
+  }
+  
+  .border-novis-secondary {
+    border-color: hsl(var(--novis-secondary));
+  }
+  
+  .border-novis-accent {
+    border-color: hsl(var(--novis-accent));
+  }
+  
+  .hover\:bg-novis-primary\/90:hover {
+    background-color: hsl(var(--novis-primary) / 0.9);
+  }
+  
+  .hover\:bg-novis-secondary\/90:hover {
+    background-color: hsl(var(--novis-secondary) / 0.9);
+  }
+  
+  .hover\:bg-novis-accent\/90:hover {
+    background-color: hsl(var(--novis-accent) / 0.9);
+  }
+  
+  .hover\:text-novis-primary:hover {
+    color: hsl(var(--novis-primary));
+  }
+  
+  .hover\:text-novis-secondary:hover {
+    color: hsl(var(--novis-secondary));
+  }
+  
+  .hover\:text-novis-accent:hover {
+    color: hsl(var(--novis-accent));
+  }
+  
+  .hover\:border-novis-primary:hover {
+    border-color: hsl(var(--novis-primary));
+  }
+  
+  .hover\:border-novis-secondary:hover {
+    border-color: hsl(var(--novis-secondary));
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+*::selection {
+  color: white !important;
+  background: hsl(var(--novis-primary)) !important;
+}
+
+.text-custom-justify{ 
+  text-align: justify;
+}
