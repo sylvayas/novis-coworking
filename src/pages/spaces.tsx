@@ -1,4 +1,3 @@
-
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -31,8 +30,7 @@ export default function SpacesPage() {
         "Salle de réunion (4h/mois incluses)",
         "Casier personnel",
         "Adresse professionnelle"
-      ],
-      price: "À partir de 450€/mois"
+      ]
     },
     {
       id: "meeting-room",
@@ -121,13 +119,15 @@ export default function SpacesPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="mt-6 flex items-center">
-                    <span className="text-2xl font-bold text-gray-900">{space.price}</span>
-                  </div>
+                  {space.price && (
+                    <div className="mt-6 flex items-center">
+                      <span className="text-2xl font-bold text-gray-900">{space.price}</span>
+                    </div>
+                  )}
                   <div className="mt-6">
-                    <Link href="/pricing">
+                    <Link href={space.id === "private-office" ? "/categories" : "/pricing"}>
                       <Button size="lg" className="hover:bg-orange-500 text-white">
-                        Voir les tarifs détaillés
+                        {space.id === "private-office" ? "Nos différents espaces" : "Voir les tarifs détaillés"}
                       </Button>
                     </Link>
                   </div>
