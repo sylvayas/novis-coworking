@@ -13,7 +13,7 @@ export default function EventsPage() {
       date: "15 juin 2025",
       time: "18:30 - 20:30",
       location: "NOVIS Coworking - Espace Événementiel",
-      image: "https://images.unsplash.com/photo-1540317580384-e5d43867caa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      image: "/images/coworking image.jpg",
       description: "Un atelier pratique pour apprendre à développer et entretenir son réseau professionnel de manière efficace et authentique.",
       speaker: "Marie Laurent, Coach en développement professionnel",
       capacity: 30,
